@@ -1,0 +1,13 @@
+2017-07-27 00:17:49,115 [0x7fe578631780] INFO  RRMode - Run...
+2017-07-27 00:17:49,118 [0x7fe578631780] INFO  RRMode - ******remote.listen.port=12006******
+2017-07-27 00:17:49,119 [0x7fe578631780] INFO  RRMode - ******worker.thread.num =4******
+2017-07-27 00:17:49,119 [0x7fe578631780] INFO  RRMode - ******client.heartbeat.timeout.s =1200******
+2017-07-27 00:17:49,119 [0x7fe578631780] TRACE RRMode - The libevent version is 2.1.8-stable
+2017-07-27 00:17:49,121 [0x7fe578631780] INFO  RRMode - Initializes worker threads...
+2017-07-27 00:17:49,125 [0x7fe578631780] INFO  RRMode - Create threads success. we hava done all the libevent setup.
+2017-07-27 00:17:49,127 [0x7fe578631780] INFO  RRMode - CMasterThread::Run:Master thread has start...
+2017-07-27 00:17:51,273 [0x7fe575bc8700] TRACE RRMode - CWorkerThread::ReadPipeCb thread id = 140623499527936
+2017-07-27 00:17:51,282 [0x7fe575bc8700] WARN  RRMode - CWorkerThread::ClientTcpErrorCb:some other errorCode = 104, description = Connection reset by peer
+2017-07-27 00:17:51,282 [0x7fe575bc8700] TRACE RRMode - CWorkerThread::conn_close sfd = 28
+2017-07-27 00:18:28,046 [0x7fe5753c7700] TRACE RRMode - CWorkerThread::ReadPipeCb thread id = 140623491135232
+2017-07-27 00:18:28,054 [0x7fe5753c7700] TRACE RRMode - CWorkerThread::conn_close sfd = 28
