@@ -222,7 +222,6 @@ void CWorkerThread::ClientTcpReadCb(struct bufferevent *bev, void *arg)
 	CONN* conn = static_cast<CONN*>(arg);
 	assert(conn != NULL);
 
-    // bufferevent只注册了读事件
 	int recv_size = 0;
 	if ((recv_size = bufferevent_read(bev, conn->rBuf + conn->rlen, DATA_BUFFER_SIZE - conn->rlen)) > 0)
 	{
