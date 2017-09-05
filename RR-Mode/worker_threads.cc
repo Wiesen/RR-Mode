@@ -354,7 +354,7 @@ CONN* CWorkerThread::GetConnFromFreelist()
 	return conn;
 }
 
-// connection减少时没有缩减缓存？
+//todo： connection减少时缩减缓存
 bool CWorkerThread::AddConnToFreelist(CONN* conn)
 {
 	bool ret = false;
