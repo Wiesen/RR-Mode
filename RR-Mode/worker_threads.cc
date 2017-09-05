@@ -36,7 +36,7 @@ bool CWorkerThread::InitThreads(struct event_base* main_base)
 		LIBEVENT_THREAD* libevent_thread_ptr = new LIBEVENT_THREAD;
 		/* 建立每个worker线程和主监听线程通信的管道 */
 		int fds[2];
-		if (pipe(fds) != 0)	// 创建：int pipe(int fd[2])
+		if (pipe(fds) != 0)
 		{
 			LOG4CXX_ERROR(g_logger, "CThread::InitThreads:Can't create notify pipe");
 			return false;
