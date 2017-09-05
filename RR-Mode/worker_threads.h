@@ -23,14 +23,13 @@ typedef struct {
 typedef struct {
     pthread_t 			thread_id;        	/* unique ID of this thread */
     struct event_base 	*base;    			/* libevent handle this thread uses */
-    struct event 		notify_event;  		/* listen event for notify pipe */  // 与master thread通信的事件
-    int 				notify_receive_fd;  /* receiving end of notify pipe */  // 与master thread的读管道
-    int 				notify_send_fd;     /* sending end of notify pipe */    // 与master thread的写管道
+    struct event 		notify_event;  		/* listen event for notify pipe */ 
+    int 				notify_receive_fd;  /* receiving end of notify pipe */ 
+    int 				notify_send_fd;     /* sending end of notify pipe */  
     CThreadSafeList<CONN_INFO> 	list_conn;	/* queue of new connections to handle */
 } LIBEVENT_THREAD;
 
 // conn数据结构，作为缓冲区存储与客户端交互的数据
-// 为什么不用evbuffer？而是自己实现字符串
 typedef struct{
     int    sfd;     // socket file descriptor
     char*  rBuf;
